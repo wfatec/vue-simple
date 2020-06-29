@@ -1,0 +1,29 @@
+{
+  "name": "@wfatec/reactivity",
+  "version": "1.0.0",
+  "description": "@wfatec/reactivity",
+  "main": "index.js",
+  "module": "dist/reactivity.esm-bundler.js",
+  "types": "dist/reactivity.d.ts",
+  "files": [
+    "index.js",
+    "lib",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run test && npm run build",
+    "test": "NODE_ENV=unittest jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wfatec/vue-simple.git"
+  },
+  "author": "wfatec",
+  "license": "MIT",
+  "homepage": "https://github.com/wfatec/vue-simple/tree/master/packages/reactivity#readme",
+  "dependencies": {
+    "@wfatec/shared": "1.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@wfatec/example",
+  "version": "1。0.0",
+  "description": "@wfatec/example",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run test && npm run build",
+    "test": "NODE_ENV=unittest jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wfatec/vue-simple.git"
+  },
+  "author": "wfatec",
+  "license": "MIT",
+  "homepage": "https://github.com/wfatec/vue-simple/tree/master/packages/example#readme",
+  "dependencies": {
+    "@wfatec/reactivity": "1.0.0"
+  }
+}

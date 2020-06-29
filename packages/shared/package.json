@@ -1,0 +1,22 @@
+{
+  "name": "@wfatec/shared",
+  "version": "1.0.0",
+  "description": "shared materials",
+  "main": "index.js",
+  "files": [
+    "lib",
+    "index.js",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run test && npm run build",
+    "test": "NODE_ENV=unittest jest"
+  },
+  "keywords": [
+    "shared"
+  ],
+  "author": "wfatec",
+  "license": "MIT"
+}
