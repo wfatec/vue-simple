@@ -8,7 +8,7 @@ import {
   hasChanged,
   isArray,
   extend
-} from '@vue/shared'
+} from '@wfatec/shared'
 import { isRef } from './ref'
 
 const builtInSymbols = new Set(
