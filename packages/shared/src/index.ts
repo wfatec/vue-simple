@@ -13,3 +13,9 @@ export const hasOwn = (
   val: object,
   key: string | symbol
 ): key is keyof typeof val => hasOwnProperty.call(val, key);
+
+// compare whether a value has changed, accounting for NaN.
+export const hasChanged = (value: any, oldValue: any): boolean =>
+  value !== oldValue && (value === value || oldValue === oldValue);
+
+export const isArray = Array.isArray;
