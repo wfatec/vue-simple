@@ -2,10 +2,10 @@
   "name": "@wfatec/shared",
   "version": "1.0.0",
   "description": "shared materials",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib",
-    "index.js",
     "package.json"
   ],
   "scripts": {

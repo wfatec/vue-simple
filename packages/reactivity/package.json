@@ -2,11 +2,9 @@
   "name": "@wfatec/reactivity",
   "version": "1.0.0",
   "description": "@wfatec/reactivity",
-  "main": "index.js",
-  "module": "dist/reactivity.esm-bundler.js",
-  "types": "dist/reactivity.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "index.js",
     "lib",
     "package.json"
   ],

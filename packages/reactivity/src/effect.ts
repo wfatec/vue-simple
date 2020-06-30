@@ -1,5 +1,5 @@
-import { TrackOpTypes, TriggerOpTypes } from "./operations";
 import { isArray } from "@wfatec/shared";
+import { TrackOpTypes, TriggerOpTypes } from "./operations";
 
 // The main WeakMap that stores {target -> key -> dep} connections.
 // Conceptually, it's easier to think of a dependency as a Dep class

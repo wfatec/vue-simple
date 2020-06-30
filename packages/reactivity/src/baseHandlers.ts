@@ -1,7 +1,7 @@
+import { isObject, hasOwn, hasChanged, isArray } from "@wfatec/shared";
 import { reactive, toRaw } from "./reactive";
 import { TrackOpTypes, TriggerOpTypes } from "./operations";
 import { track, trigger, ITERATE_KEY } from "./effect";
-import { isObject, hasOwn, hasChanged, isArray } from "@wfatec/shared";
 
 const get = /*#__PURE__*/ createGetter();
 
