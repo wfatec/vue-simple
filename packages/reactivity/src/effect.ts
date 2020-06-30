@@ -60,16 +60,6 @@ export function effect<T = any>(fn: () => T): ReactiveEffect<T> {
   return effect;
 }
 
-export function stop(effect: ReactiveEffect) {
-  if (effect.active) {
-    cleanup(effect);
-    if (effect.options.onStop) {
-      effect.options.onStop();
-    }
-    effect.active = false;
-  }
-}
-
 let uid = 0;
 
 function createReactiveEffect<T = any>(
@@ -160,7 +150,6 @@ export function trigger(
   }
 
   const effects = new Set<ReactiveEffect>();
-  const computedRunners = new Set<ReactiveEffect>();
   const add = (effectsToAdd: Set<ReactiveEffect> | undefined) => {
     if (effectsToAdd) {
       effectsToAdd.forEach((effect) => {
@@ -205,8 +194,5 @@ export function trigger(
     effect();
   };
 
-  // Important: computed effects must be run first so that computed getters
-  // can be invalidated before any normal effects that depend on them are run.
-  computedRunners.forEach(run);
   effects.forEach(run);
 }

@@ -48,14 +48,13 @@ function createSetter(shallow = false) {
     } else if (hasChanged(value, oldValue)) {
       trigger(target, TriggerOpTypes.SET, key, value);
     }
-    
+
     return result;
   };
 }
 
 function deleteProperty(target: object, key: string | symbol): boolean {
   const hadKey = hasOwn(target, key);
-  const oldValue = (target as any)[key];
   const result = Reflect.deleteProperty(target, key);
   if (result && hadKey) {
     trigger(target, TriggerOpTypes.DELETE, key, undefined);
