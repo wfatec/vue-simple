@@ -9,6 +9,7 @@
     "package.json"
   ],
   "scripts": {
+    "start": "ts-node src/index.ts",
     "build": "rm -rf lib && tsc",
     "watch": "tsc -w",
     "prepublishOnly": "npm run test && npm run build",
