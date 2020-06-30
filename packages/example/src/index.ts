@@ -6,7 +6,7 @@ const userInfo = reactive({
 })
 
 effect(() => {
-    console.log("The new userInfo is :", userInfo)
+    console.log("The new userInfo is :", userInfo.age)
 })
 
 userInfo.age = 30;
